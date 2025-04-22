@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    
+    <!--Hay que modificar el meta para poder usar APIs externos -->
+    <meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; connect-src 'self' https://api.open-meteo.com; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <script src="weather.js" defer></script>
+    <section id="text">
+    <div id="climate">
+    </div>
+    <div id="temp"></div>
+  </section>
+  </body>
+</html>
